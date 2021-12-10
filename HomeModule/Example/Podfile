@@ -1,0 +1,32 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+useR_pods = [
+  'HomeModule'
+]
+
+target 'HomeModule_Example' do
+  pod 'HomeModule', :path => '../'
+
+  target 'HomeModule_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
+
+post_install do |installer|
+  puts "Adding code generation build phases to development pods"
+  installer.pods_project.targets.each do |target|
+    if useR_pods.include? target.name
+      phase = target.new_shell_script_build_phase("Code generation")
+      phase.shell_script = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/../../#{target.name}/Classes/R.generated_#{target.name}.swift\""
+      phase.output_paths << "$SRCROOT/../../#{target.name}/Classes/R.generated_#{target.name}.swift"
+      target.build_phases.unshift(target.build_phases.pop()) # move it to the beginning. `target.build_phases.rotate(1)` should have worked as well
+
+      puts phase.output_paths
+    end
+  end
+end
+# --accessLevel public

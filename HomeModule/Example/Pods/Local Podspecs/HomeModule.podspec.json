@@ -1,0 +1,72 @@
+{
+  "name": "HomeModule",
+  "version": "0.0.1",
+  "summary": "A short description of HomeModule.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/liqing.Cheng/HomeModule",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "liqing.Cheng": "liqing.Cheng@beantechs.com"
+  },
+  "source": {
+    "git": "https://github.com/liqing.Cheng/HomeModule.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "dependencies": {
+    "R.swift": [
+      "6.1.0"
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "Classes",
+      "source_files": "HomeModule/Classes/**/*"
+    },
+    {
+      "name": "Assets",
+      "subspecs": [
+        {
+          "name": "Images",
+          "resources": [
+            "HomeModule/Assets/Images/*.{png, jpeg}",
+            "HomeModule/Assets/Images/**/*.{png, jpeg}"
+          ]
+        },
+        {
+          "name": "Xib",
+          "resources": [
+            "HomeModule/Assets/Xib/*",
+            "HomeModule/Assets/Xib/**/*"
+          ]
+        },
+        {
+          "name": "Files",
+          "resources": [
+            "HomeModule/Assets/Files/*",
+            "HomeModule/Assets/Files/**/*"
+          ]
+        },
+        {
+          "name": "Fonts",
+          "resources": [
+            "HomeModule/Assets/Fonts/*.{ttf}",
+            "HomeModule/Assets/Fonts/**/*.{ttf}"
+          ]
+        },
+        {
+          "name": "Localized",
+          "resources": [
+            "HomeModule/Assets/Localized/*",
+            "HomeModule/Assets/Localized/**/*"
+          ]
+        }
+      ]
+    }
+  ]
+}

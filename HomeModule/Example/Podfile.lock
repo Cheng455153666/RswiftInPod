@@ -1,0 +1,48 @@
+PODS:
+  - HomeModule (0.0.1):
+    - HomeModule/Assets (= 0.0.1)
+    - HomeModule/Classes (= 0.0.1)
+    - R.swift (= 6.1.0)
+  - HomeModule/Assets (0.0.1):
+    - HomeModule/Assets/Files (= 0.0.1)
+    - HomeModule/Assets/Fonts (= 0.0.1)
+    - HomeModule/Assets/Images (= 0.0.1)
+    - HomeModule/Assets/Localized (= 0.0.1)
+    - HomeModule/Assets/Xib (= 0.0.1)
+    - R.swift (= 6.1.0)
+  - HomeModule/Assets/Files (0.0.1):
+    - R.swift (= 6.1.0)
+  - HomeModule/Assets/Fonts (0.0.1):
+    - R.swift (= 6.1.0)
+  - HomeModule/Assets/Images (0.0.1):
+    - R.swift (= 6.1.0)
+  - HomeModule/Assets/Localized (0.0.1):
+    - R.swift (= 6.1.0)
+  - HomeModule/Assets/Xib (0.0.1):
+    - R.swift (= 6.1.0)
+  - HomeModule/Classes (0.0.1):
+    - R.swift (= 6.1.0)
+  - R.swift (6.1.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+
+DEPENDENCIES:
+  - HomeModule (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - R.swift
+    - R.swift.Library
+
+EXTERNAL SOURCES:
+  HomeModule:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HomeModule: 498915d0b375f276ea436687cab722d61d58d7f7
+  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+
+PODFILE CHECKSUM: 7450d50fdb9ae64aeebf5b786ee43494971b65c5
+
+COCOAPODS: 1.11.2
