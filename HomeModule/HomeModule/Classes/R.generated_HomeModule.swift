@@ -119,7 +119,7 @@ struct R: Rswift.Validatable {
     #endif
 
     static func myCus02ViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.myCus02ViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      return UIKit.UINib(resource: R.nib.myCus02ViewController).instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
     fileprivate init() {}
